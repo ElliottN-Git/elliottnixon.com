@@ -88,7 +88,7 @@ const ProjectCard = (props) => {
 
     let link = '';
 
-    if (props.slides.length !== 0) {
+    if (props.slides !== undefined && props.slides.length !== 0) {
         // layout = <Link to={props.link} className={classes.ProjectLink}>{layout}</Link>
         link = <div onClick={props.scrollToSection} className={classes.ProjectLink}></div>
     }

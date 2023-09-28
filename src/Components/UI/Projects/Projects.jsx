@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, createRef } from 'react';
+import React, { useState, useEffect, useRef, createRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
@@ -15,8 +15,19 @@ import Carousel from '../Carousel/Carousel';
 import CarouselSlide from '../Carousel/CarouselSlide';
 
 //Data
-import projects from './Projects.json';
-const projectsArr = projects.projects;
+//Moved static JSON file to Firebase realtime database
+// import projects from './Projects.json';
+// const projectsArr = projects.projects;
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, get } from "firebase/database";
+const firebaseConfig = {
+    databaseURL: "https://elliotts-emporium.firebaseio.com",
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
+const projectsDbRef = ref(database, 'projects');
 
 
 //TODO:
@@ -24,6 +35,25 @@ const projectsArr = projects.projects;
 
 
 const Projects = () => {
+    const [projectsArr, setProjectsArr] = useState([]);
+
+    useEffect(() => {
+        fetchProjects();
+    }, []);
+
+    const fetchProjects = async () => {
+        await get(projectsDbRef, `projects`).then((snapshot) => {
+            if (snapshot.exists()) {
+                setProjectsArr(snapshot.val());
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+    }
+
+    // console.log("projectsArr after fetchprojects(): ", projectsArr);
 
     //Framer motion setup for the project cards
     const controls1 = useAnimation();
@@ -107,7 +137,8 @@ const Projects = () => {
                     </motion.button>
                     {/* Mapped projects */}
                     {projectsArr.map((project, index) => {
-                        if (project.slides.length !== 0) {
+                        // console.log(project.slides);
+                        if (project.slides !== undefined && project.slides.length !== 0) {
                             return (
                                 <ContentBlock>
                                     <section
