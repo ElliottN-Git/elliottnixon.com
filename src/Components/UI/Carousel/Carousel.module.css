@@ -1,0 +1,41 @@
+.CarouselContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 65vh;
+    width: 100vw;
+}
+
+.SlideContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 60vh;
+    min-width: 80vw;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.FwdBackBtn {
+    height: 80%;
+    width: 100%;
+    right: 0px;
+    background-color: transparent;
+    font-size: large;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.FwdBackBtn:hover {
+    transition: scale(1.1);
+    cursor: pointer;
+    color: white;
+    background-color: rgba(43,42,57,0.5);
+}

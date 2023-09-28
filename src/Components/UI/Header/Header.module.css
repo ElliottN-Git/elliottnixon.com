@@ -1,0 +1,90 @@
+.Header {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
+}
+
+.Header .Blurb {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    bottom: 100vh;
+    top: 50vh;
+    left: 20vw;
+    width: fit-content;
+    padding: 10px 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 1px rgba(25, 25, 25, 0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+/* TODO sort out positioning of text */
+.Header img {
+    z-index: 10;
+    position: absolute;
+    filter: invert(1);
+    top: 50vh;
+    left: 15vw;
+    margin: 0px 100px;
+}
+
+.fade-in {
+    animation: fadeIn ease 20s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Header {
+        /* This stops the 'bouncing' of the background image 
+            on scroll on mobiles  */
+        background-size: auto 225vw;
+        background-position: -225vw ;
+    }
+
+    .Header .Blurb {
+        top: 90vh;
+        left: 0;
+        width: 100%;
+        padding: 10px 0px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .Header {
+        /* This stops the 'bouncing' of the background image 
+            on scroll on mobiles  */
+        background-size: auto 125vw;
+        background-position: -100vw -25vh;
+    }
+
+    .Header .Blurb {
+        top: -10vh;
+        left: 0;
+        width: 100%;
+        padding: 10px 0px;
+    }
+}
+
+/* Cursor */
+.typed-cursor {
+    font-size: 8vmin;
+}

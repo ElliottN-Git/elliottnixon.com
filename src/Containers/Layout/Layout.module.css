@@ -1,0 +1,16 @@
+.Content {
+    height: 100%;
+    display: flex;
+    flex: none;
+    flex-flow: column nowrap;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.EnableScroll {
+    overflow: auto;
+}
+
+.DisableScroll {
+    overflow: hidden;
+}

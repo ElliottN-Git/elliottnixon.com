@@ -1,0 +1,228 @@
+.CardScrollViewRef {
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-items: start;
+  justify-content: start;
+}
+
+.TiltContainer {
+  display: flex;
+  height: 30vh;
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective)) rotateY(var(--rotateX)) rotateX(var(--rotateY)) scale(var(--scale));
+  grid-column: span 2;
+  z-index: 0;
+}
+
+.TiltContainer:hover * .TitleShadow,
+.StackShadow {
+  opacity: 1;
+}
+
+.TiltContainer:hover * .Title {
+  transform: translateZ(50px);
+  z-index: 3;
+}
+
+.TiltContainer:hover * .ProjectLink {
+  transform: translateZ(51px);
+}
+
+.Title:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  /* background: purple; */
+  background: linear-gradient(to right, blue , purple);
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.TiltContainer:hover * .Title:after {
+  z-index: -1;
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.TiltContainer:hover * .Stack {
+  transform: translateZ(20px);
+}
+
+.ProjectCard {
+  /* background-color: rgb(183, 183, 183); */
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2b2a33;
+  /*rgba(43,42,51,0.5);*/
+  height: inherit;
+  min-height: 30vh;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-size: 1.8vw;
+  border-radius: 10px;
+  /* grid-column: span 2; */
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: visible !important; /*Required for preserve-3d to work */
+  transform-style: preserve-3d;
+
+  /* outline and backface-visibility to smooth the edges when tilting */
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* transform: perspective(1000px); */
+}
+
+
+/* Dealing with 2 orphan items in last row of grid*/
+/* .ProjectCard:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+  }
+  
+  .ProjectCard:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+  } */
+
+/* Dealing with single orphan */
+/* .ProjectCard:last-child:nth-child(3n - 2) {
+    grid-column-end: 5;
+  } */
+
+
+.Title {
+  /* position: absolute; */
+  /* top: 0; */
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  max-height: 30px;
+  flex: 1;
+  z-index: 3;
+  margin: 15px 0px 15px 0px;
+  font-family: 'Century Gothic', sans-serif, Arial;
+  font-weight: 400;
+  font-size: 4vmin;
+  color: white;
+  /* mix-blend-mode: difference; */
+  /* text-shadow: ; */
+  white-space: pre-line;
+  text-align: center;
+  transform: translateZ(0px);
+  transition: transform 0.25s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.TitleShadow {
+  /* display: none; */
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  min-height: 0;
+  transform: translateZ(0px);
+  color: transparent;
+  /* text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); */
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  top: 0;
+  margin: 15px 0px 15px 0px;
+  font-family: 'Century Gothic', sans-serif, Arial;
+  font-weight: 400;
+  font-size: 3vmin;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.StackContainer {
+  position: relative;
+}
+
+.Stack {
+  /* position: absolute; */
+  bottom: 0;
+  width: 90%;
+  min-width: 0;
+  max-height: 30px;
+  min-height: 0;
+  /* left: 5%; */
+  margin: 15px 0px 15px 0px;
+  z-index: 1;
+  font-family: 'Victor Mono', monospace, Arial;
+  font-weight: 100;
+  font-size: 2.5vmin;
+  color: whitesmoke;
+  /* text-shadow: 0px 3px 5px lightgray; */
+  white-space: pre-line;
+  text-align: center;
+  transform: translateZ(0px);
+  transition: transform 0.25s ease;
+  -webkit-user-select: none;
+  user-select: none;
+
+  flex: 2;
+}
+
+.StackShadow {
+  /* display: none; */
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  left: 5%;
+  transform: translateZ(0px);
+  color: transparent;
+  /* text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); */
+  text-shadow: 0 0 20px rgba(49, 49, 49, 0.8);
+  bottom: 0;
+  margin: 15px 0px 15px 0px;
+  font-family: 'Victor Mono', monospace, Arial;
+  font-weight: 100;
+  font-size: 2vmin;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.ProjectCard > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 95%;
+  min-width: 0;
+  min-height: 0;
+  max-height: 95%;
+  filter: brightness(0.3);
+  z-index: 1;
+}
+
+.ProjectLink {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: 4;
+  /* max-width: 25vw; */
+  /* max-height: 33vh; */
+  /* text-decoration: none; */
+  /* color: black; */
+  /* grid-column: span 2; */
+  /* transform-style: preserve-3d; */
+}
+
+.ProjectLink:hover {
+  cursor: pointer;
+}

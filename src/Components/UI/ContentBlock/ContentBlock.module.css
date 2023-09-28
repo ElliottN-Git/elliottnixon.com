@@ -1,0 +1,13 @@
+.ContentBlock {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex: none;
+    flex-flow: column nowrap;
+    /* overflow-y: auto; */
+    /* overflow: hidden; */
+    /* scroll-snap-type: y mandatory; */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    flex-shrink: 0;
+}

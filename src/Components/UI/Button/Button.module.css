@@ -1,0 +1,64 @@
+.Button {
+    margin-top: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vmin;
+    height: 10vh;
+    width: inherit;
+    right: 10vw;
+    border: none;
+    border-radius: 25px;
+    box-sizing: content-box;
+    transition-property: text-decoration, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.Button p:hover {
+    cursor: pointer;
+}
+
+.Link {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.Button p {
+    position: relative;
+    color: black;
+    padding: 10px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 0;
+    z-index: 0;
+}
+
+.Button p::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    border-radius: 10px;
+    background: linear-gradient(to right, blue, purple);
+    height: 100%;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.Button p:hover {
+    color: white;
+}
+
+.Button p:hover:after {
+    z-index: -1;
+    left: 0;
+    right: auto;
+    width: 100%;
+}

@@ -1,0 +1,70 @@
+.Background {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.PNFContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: whitesmoke;
+    /* background-color: white; */
+    background: linear-gradient(to left, rgba(0, 0, 255, 0.33), white, white);
+}
+
+.NotFoundImg {
+    object-fit: contain;
+    height: 100%;
+    max-width: 50%;
+}
+
+
+.TextBtnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.TextBtnContainer h1 {
+    font-family: 'Century Gothic', sans-serif, Arial;
+    font-weight: 300;
+    font-size: 4vmin;
+    text-align: center;
+    color: black;
+    width: 100%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .PNFContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        color: whitesmoke;
+        background-color: white;
+    }
+
+    .NotFoundImg {
+        /* object-fit: contain; */
+        position: absolute;
+        bottom: 0;
+        max-height: 40%;
+        width: 100%;
+        z-index: 1;
+    }
+
+}

@@ -1,0 +1,476 @@
+.CB0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    background: #222 url("../../../assets/images/MindMape/cover.jpg") center center no-repeat;
+}
+
+.CB0Background {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-color: whitesmoke;
+}
+
+.LaunchCard {
+    width: 75vw;
+    height: 30vh;
+    background-color: whitesmoke;
+    border: ridge rgba(200,200,200,0.7) 1px;
+    border-top-width: 1px;
+    border-top-style: ridge;
+    border-top-color: rgba(200, 200, 200, 0.7);
+    border-right-width: 1px;
+    border-right-style: ridge;
+    border-right-color: rgba(200, 200, 200, 0.7);
+    border-bottom-width: 1px;
+    border-bottom-style: ridge;
+    border-bottom-color: rgba(200, 200, 200, 0.7);
+    border-left-width: 1px;
+    border-left-style: ridge;
+    border-left-color: rgba(200, 200, 200, 0.7);
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-radius: 10px;
+    box-shadow: 3px 5px 3px 1px lightslategrey;
+}
+
+.CB1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+
+.CB1Text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+    color: rgb(51, 52, 47);
+}
+
+.CB1Text h1 {
+    height: 100%;
+    width: 100%;
+    color: rgb(198, 222, 192);
+    background-color: rgb(51, 52, 47);
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+    text-decoration: underline;
+}
+
+.CB1Text ul {
+    margin: 20px 10% 0 10%;
+}
+
+.CB1Text ul > * {
+    font-size: 2.2vmin;
+    text-align: left;
+    padding: 3px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .CB1Background {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center 0;
+        background-size: auto 50vw;
+    }
+
+    .CB1Text h1 {
+        font-size: 3.5vmax;
+    }
+
+    .CB1Text h2 {
+        font-size: 2.5vmax;
+    }
+
+    .CB1Text ul {
+        margin-top: 0;
+    }
+
+    .CB1Text ul > * {
+        font-size: 2vmax;
+        text-align: left;
+        padding: 3px;
+        margin: 10px;
+    }
+}
+
+.CB2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.CB2 h1 {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: rgb(51, 52, 47);
+    color: rgb(198, 222, 192);
+    text-decoration: underline;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+}
+
+.CB2 h2 {
+    margin: 0;
+}
+
+.VersionControl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    background-color: whitesmoke;
+    color: rgb(51, 52, 47)
+}
+
+.VersionControl img {
+    height: 100%;
+    max-width: 50%;
+    align-self: center;
+    border: 5px solid rgb(198, 222, 192);
+    border-right: none;
+    box-sizing: border-box;
+}
+
+.VersionControlBlurb, .DatabasePlanBlurb {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
+    font-size: 2vmin;
+}
+
+.DatabasePlan {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(51, 52, 47);
+    color: rgb(198, 222, 192)
+}
+ 
+.CB2 p {
+    font-size: 1.2vmax;
+}
+
+.DatabasePlan img {
+    height: 100%;
+    min-width: 50%;
+    align-self: center;
+    border: 5px solid rgb(51, 52, 47);
+    border-left: none;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1000px) {
+    .CB2 h1 {
+        /* font-size: 3.5vmax; */
+    }
+
+    .CB2 h2 {
+        /* font-size: 2.5vmax; */
+    }
+}
+
+.SignUpBlock {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 52, 47);
+}
+
+.SignUpFormImg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 40px;
+    background-size: 50% 100%;
+}
+
+.SignUpBlurb {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.SignUpBlurb img {
+    padding-bottom: 15px;
+    background-color: whitesmoke;
+}
+
+.SignUpRightBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.SignUpRightBlock img {
+    width: 100%;
+}
+
+.SignUpBlurb h1 {
+    width: 100%;
+    color: rgb(198, 222, 192);
+    text-decoration: underline;
+    background-color: rgb(51, 52, 47);
+    margin: 0;
+    padding: 20px 0px;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+}
+
+.SignUpBlurb p {
+    background-color: whitesmoke;
+    color: rgb(51, 52, 47);
+    height: 100%;
+    margin: 0;
+    padding: 25px;
+    top: 200vh;
+    font-size: 2vmin;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.Profile h1 {
+    justify-self: flex-start;
+    width: 100%;
+    background-color: rgb(51, 52, 47);
+    color: rgb(198, 222, 192);
+    margin: 0;
+    text-decoration: underline;
+    padding: 15px 0px;
+    position: sticky;
+    top: 40px;
+}
+
+.Profile p {
+    width: 75%;
+    font-size: 2.2vmin;
+}
+
+.Profile img {
+    min-width: 50%;
+    max-width: 100%;
+    max-height: 60%;
+}
+
+.Articles {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(51, 52, 47);
+}
+
+.Articles h1 {
+    width: 100%;
+    background-color: rgb(51, 52, 47);
+    color: rgb(198, 222, 192);
+    margin: 0;
+    padding: 15px 0px;
+    text-decoration: underline;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+    z-index: 60;
+}
+
+.Articles h2 {
+    color: whitesmoke;
+}
+
+.Articles h3 {
+    color: rgb(198, 222, 192);
+    background-color: rgb(51, 52, 47);
+    width: 70%;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.Articles p {
+    margin: 0px;
+    padding: 20px 0px;
+    width: 70%;
+    background-color: rgb(51, 52, 47);
+}
+
+.PanelContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(198, 222, 192);
+    overflow: hidden;
+}
+
+
+.ArticlesPanel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.CommentsPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.PanelContainer img {
+    max-width: 70%;
+    z-index: 10;
+}
+
+.ArticlesPanel div,
+.CommentsPanel div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+
+.ArticlesPanel div:hover,
+.CommentsPanel div:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    z-index: 60;
+}
+
+.MobilePanelContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MobilePanel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MobilePanel img {
+    max-width: 100%;
+    margin-top: 10vh;
+}
+
+.MobilePanelsHeading {
+    width: 100%;
+    background-color: rgb(51, 52, 47);
+    color: rgb(198, 222, 192);
+    margin: 0;
+    padding: 15px 0px;
+    text-decoration: underline;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+    z-index: 10;
+}
+
+.ProfanityFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+    color: rgb(51, 52, 47);
+    height: 100%;
+}
+
+.ProfanityFilter h1 {
+    text-decoration: underline;
+}
+
+.ProfanityFilter p {
+    font-size: 2vmin;
+    width: 75%;
+}
+
+.ProfanityFilter img {
+    width: 80%;
+}
+
+@media only screen and (max-width: 500px) {
+    .CB1 p,
+    .CB2 p,
+    .Profile p,
+    .SignUpBlock p,
+    .MobilePanel p,
+    .ProfanityFilter p {
+        font-size: 1.9vmax;
+        font-weight: 500;
+        overflow-y: scroll;
+    }
+
+    .Profile {
+        justify-content: flex-start;
+    }
+
+    .Profile img {
+        margin-top: 10vh;
+    }
+
+    .VersionControlBlurb, 
+    .DatabasePlanBlurb {
+        font-size: 2vmax;
+        padding: 0;
+    }
+
+    .SignUpBlock {
+        flex-direction: column;
+        background-color: whitesmoke;
+        height: 100%;
+    }
+
+    .SignUpFormImg {
+        background-position: 0 0;
+        background-size: 100% 100%;
+    }
+}

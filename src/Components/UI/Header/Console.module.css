@@ -1,0 +1,133 @@
+.Terminal {
+    width: 40vw;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    left: 10vw;
+    margin: 2.5vw;
+    margin-top: 33vh;
+    padding: 10px;
+    border: 2px solid rgb(100,100,100);
+    border-radius: 5px;
+    box-shadow: 0px 2px 14px 3px rgba(75,75,75,0.7);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.NameContainer {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.Name {
+    /* font-family: open-sans, "AppleGothic", arial, sans-serif; */
+    /* font-family: 'Century Gothic', sans-serif, Arial; */
+    font-family: 'Victor Mono', monospace, Arial;
+    font-weight: 400;
+    font-size: 6vmin;
+    color: #fff;
+    margin: 0;
+}
+
+.RolesContainer {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.Roles {
+    font-family: 'Victor Mono', monospace, Arial;
+    /* font-family: 'Century Gothic', sans-serif, Arial; */
+    font-weight: 400;
+    /* font-style: italic; */
+    font-size: 4vmin;
+    color: #fff;
+    margin: 0;
+}
+
+.SfmContainer {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.Sfm {
+    font-family: 'Victor Mono', monospace, Arial;
+    /* font-family: 'Century Gothic', sans-serif, Arial; */
+    font-weight: 400;
+    /* font-style: italic; */
+    font-size: 2.5vmin;
+    color: #fff;
+    margin: 0;
+}
+
+/* Cursor */
+/* Cursor */
+.TypedCursor {
+    opacity: 1;
+    height: 100%;
+    text-align: center;
+}
+
+.TypedCursor.TypedCursorBlink {
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+.NameContainer > .TypedCursor {
+    font-size: 6vmin;
+}
+
+.RolesContainer > .TypedCursor {
+    font-size: 4vmin;
+}
+
+.SfmContainer > .TypedCursor {
+    font-size: 2.2vmin;
+    height: inherit;
+}
+
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Terminal {
+        width: 70vw;
+        top: 30vh;
+        left: 5vw;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .Terminal {
+        align-self: center;
+    }
+}

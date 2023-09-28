@@ -1,0 +1,101 @@
+{
+    "projects": [
+        {
+            "title": "MindMape",
+            "stack": "SQL / NodeJS / Express / Bootstrap",
+            "link": "/MindMAPE",
+            "image": "/MindMape/WriteArticle.png",
+            "slides": [
+                {
+                    "image": "/MindMape/loginpage.png",
+                    "title": "Brief",
+                    "text": "<h3>Create a blogging platform with the following features:</h3><ul><li>Users can create and edit their unique accounts</li><li>A home-page with a list of articles that are available for everyone to view</li><li>Logged in users can write, edit and delete their own articles</li><li>Logged in users can also view and write comments, delete their own comments, and moderate others' comments on their own articles</li><li>All articles and user information is stored in a database, with no passwords saved as plaintext</li><li>An extra feature of our team's choosing - we chose to implement a toggleable article profanity filter</li></ul>"
+                },
+                {
+                    "image": "/MindMape/mindMape ERD.jpeg",
+                    "title": "Design",
+                    "text": "We started by outlining the tables, their columns and relationships between them for the SQL database. <br/><br/>Following the database design, we mocked up the layout of the website.<br/><br/>Once we iterated through several mockups, we created a list of the required features as user stories on a kanban board for project management."
+                },
+                {
+                    "image": "/MindMape/git-branching-model-croppedjpg.jpg",
+                    "title": "Build",
+                    "text": "The project was managed in a GitLab repository with a ‘Feature Branching’ workflow.<br/><br/>We individually worked on features on our own branches and when completed would submit a pull request to be peer reviewed and merged to master once passed.<br/><br/>This worked extremely well as conflicts were regularly identified and resolved, and all team members had up-to-date versions of the project."
+                },
+                {
+                    "image": "/MindMape/firebase + gcp.png",
+                    "title": "Deployment",
+                    "text": "The original version of this project wasn't deployed, but I took it upon myself to do so.<br/> The first step was hosting the SQL database in Google Cloud via Cockroachlabs.cloud. To do this I had to reformat the database as PostgreSQL from SQLite.<br/><br/>The frontend was then hosted in a Google Cloud Function via Firebase.<br/><br/>"
+                }
+            ]
+        },
+        {
+            "title": "BurgerBuilder",
+            "stack": "React / Redux",
+            "link": "/BurgerBuilder",
+            "image": "/BurgerBuilder/BuildPage.png",
+            "slides": [
+                {
+                    "image": "/BurgerBuilder/BuildPage.png",
+                    "title": "A React Project",
+                    "text": "Built as a personal project to learn React, this was completed as a part of the Udemy course 'React - The Complete Guide' by Academind/Maximillian Schwarzmüller."
+                },
+                {
+                    "image": "/BurgerBuilder/BuildPage.png",
+                    "title": "Design and Build",
+                    "text": "The main front-end framework of this project was React, but also encorporated other libraries such as Redux and axios."
+                }
+            ]
+        },
+        {
+            "title": "Bored API",
+            "stack": "NextJS",
+            "link": "/nextjsandapis",
+            "image": "/BoredAPI/BoredAPI.png",
+            "slides": [
+                {
+                    "image": "/BoredAPI/BoredAPI.png",
+                    "title": "A NextJS Project",
+                    "text": "A simple website to explore NextJS, while having some fun with public APIs."
+                }
+            ]
+        },
+        {
+            "title": "Meals App",
+            "stack": "React Native",
+            "link": "",
+            "image": "/ElliottNixon/react native logo.png",
+            "slides": [
+                {
+                    "image": "/ElliottNixon/react native logo.png",
+                    "title": "A React Native Project",
+                    "text": "Built as a personal project to learn React Native, this was completed as a part of the Udemy course 'React Native - The Practical Guide' by Academind/Maximillian Schwarzmüller."
+                }
+            ]
+        },
+        {
+            "title": "ElliottNixon.com",
+            "stack": "React / CSS / Framer-Motion",
+            "link": "",
+            "image": "/ElliottNixon/header.png",
+            "slides": [
+                {
+                    "image": "/ElliottNixon/reactjs logo.png",
+                    "title": "Another React Project",
+                    "text": "I built the website that you're on right now using React, CSS, Framer Motion, NodeJS and Express."
+                },
+                {
+                    "image": "/ElliottNixon/firebase deploy.jpg",
+                    "title": "Deployment",
+                    "text": "Deployed via a Firebase CI/CD pipeline utilising a GitHub build action.<br/>This means that as soon as a pull request is merged, the updated master branch is immediately deployed to production in Firebase without having to manually call npm run build and Firebase deploy."
+                }
+            ]
+        },
+        {
+            "title": "More coming soon!",
+            "stack": "",
+            "link": "",
+            "image": "",
+            "slides": []
+        }
+    ]
+}
